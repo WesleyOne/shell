@@ -3,7 +3,9 @@
 
 ## OSS命令上传文件（osscp.sh）
 
-> 使用限制:目前仅支持MacOS、CentOS、Ubuntu的64位/32位系统
+👍感谢[官方工具ossutil](https://help.aliyun.com/document_detail/50452.html)[(源码)](https://github.com/aliyun/ossutil)的支持，更多命令推荐使用官方工具。
+
+> 本脚本使用限制:目前仅支持MacOS、CentOS、Ubuntu的64位/32位系统
 
 ### 使用方法：
 
