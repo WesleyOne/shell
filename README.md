@@ -30,3 +30,26 @@ chmod +x osscp.sh
 ```sh
 ./osscp.sh [filename1] [filename2] [filenameN]
 ```
+
+### 提醒
+
+- 建议使用OSS的内网endpoint
+- 按需为accessKey用户分配最小权限
+- `osscp.sh`配置修改完成后，可上传至OSS，便捷后续使用。（设置私有访问，防止配置外泄）
+
+### 最佳实践
+
+#### 下载内网ECS的内存Dump文件
+
+```shell
+# 获取内存 Dump 文件的命令：
+jmap -dump:format=b,file=生成的文件名 进程号
+
+# 压缩文件
+gzip 文件名
+
+# 上传文件
+./osscp.sh 文件名.gz
+
+# 登陆OSS控制台或客户端下载文件
+```
