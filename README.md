@@ -10,9 +10,6 @@
 ### 使用方法：
 
 1. 下载脚本
-```
-wget https://raw.githubusercontent.com/WesleyOne/shell/main/osscp.sh
-```
 
 2. 修改配置
 ```sh
