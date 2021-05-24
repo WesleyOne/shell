@@ -24,21 +24,22 @@ SYS_UNAME=`uname  -a`
 MAC_OS="Darwin"
 CENTOS="centos"
 UBUNTU_OS="ubuntu"
-LINUX_OS="linux"
+LINUX_OS="Linux"
 OS_BIT=`getconf LONG_BIT`
-
+ 
 if [[ $SYS_UNAME =~ $MAC_OS ]];then
     _SYS=$MAC_OS
 elif [[ $SYS_UNAME =~ $CENTOS ]];then
-    echo "centos"
     _SYS=$LINUX_OS
 elif [[ $SYS_UNAME =~ $UBUNTU_OS ]];then
-    echo "ubuntu"
+    _SYS=$LINUX_OS
+elif [[ $SYS_UNAME =~ $LINUX_OS ]];then
     _SYS=$LINUX_OS
 else
     echo "[ERROR]未知系统 SYSTEM:"$SYS_UNAME
     exit
 fi
+echo $_SYS
 
 # 根据系统类型选择脚本
 if [[ $_SYS == $MAC_OS && $OS_BIT == 64 ]]; then
